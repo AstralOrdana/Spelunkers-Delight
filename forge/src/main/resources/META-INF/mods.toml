@@ -7,7 +7,7 @@ license="LGPLv3"
 
 [[mods]] #mandatory
 
-modId="template_mod" #mandatory
+modId="spelunkers_delight" #mandatory
 
 version = "${version}"
 
@@ -19,12 +19,12 @@ credits="Ordana" #optional
 
 authors="Ordana" #optional
 
-itemIcon="template_mod:template" #catalogue icon
+itemIcon="spelunkers_delight:template" #catalogue icon
 description='''
 Template Mod Description
 '''
 
-[[dependencies.template_mod]] #optional
+[[dependencies.spelunkers_delight]] #optional
     # the modid of the dependency
     modId="forge" #mandatory
 
@@ -35,7 +35,7 @@ Template Mod Description
     ordering="NONE"
     side="BOTH"
 # Here's another dependency
-[[dependencies.template_mod]]
+[[dependencies.spelunkers_delight]]
     modId="minecraft"
     mandatory=true
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
@@ -43,7 +43,7 @@ Template Mod Description
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.template_mod]]
+[[dependencies.spelunkers_delight]]
 
     modId="moonlight"
     mandatory=true

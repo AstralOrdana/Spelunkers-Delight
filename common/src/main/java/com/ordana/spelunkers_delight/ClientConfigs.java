@@ -1,4 +1,4 @@
-package com.ordana.template_mod;
+package com.ordana.spelunkers_delight;
 
 import net.mehvahdjukaar.moonlight.api.platform.configs.ConfigBuilder;
 import net.mehvahdjukaar.moonlight.api.platform.configs.ConfigSpec;
@@ -18,7 +18,7 @@ public class ClientConfigs {
     public static Supplier<Integer> INTEGER_CONFIG;
 
     static {
-        ConfigBuilder builder = ConfigBuilder.create(TemplateMod.res("client"), ConfigType.CLIENT);
+        ConfigBuilder builder = ConfigBuilder.create(SpelunkersDelight.res("client"), ConfigType.CLIENT);
 
         builder.push("general");
         BOOLEAN_CONFIG = builder.comment("Boolean Config Name").define("boolean_config", false);

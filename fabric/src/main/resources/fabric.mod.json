@@ -1,34 +1,31 @@
 {
   "schemaVersion": 1,
-  "id": "template_mod",
+  "id": "spelunkers_delight",
   "version": "${version}",
-  "name": "Template Mod",
-  "description": "Template Mod Description",
+  "name": "Spelunker's Delight",
+  "description": "Spelunker's Delight Description",
   "authors": [
     "Ordana"
   ],
   "contact": {
-    "homepage": "https://www.curseforge.com/minecraft/mc-mods/template_mod",
-    "sources": "https://github.com/AstralOrdana/template_mod"
+    "homepage": "https://modrinth.com/mod/spelunkers_delight",
+    "sources": "https://github.com/AstralOrdana/spelunkers_delight"
   },
   "license": "LGPLv3",
   "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.ordana.template_mod.fabric.TemplateModFabric"
-    ],
-    "modmenu": [
-      "com.ordana.template_mod.integration.fabric.ModMenuCompat"
+      "com.ordana.spelunkers_delight.fabric.SpelunkersDelightFabric"
     ]
   },
   "mixins": [
-    "template_mod.mixins.json",
-    "template_mod-common.mixins.json"
+    "spelunkers_delight.mixins.json",
+    "spelunkers_delight-common.mixins.json"
   ],
   "depends": {
     "fabric": "*",
-    "minecraft": ">=1.19.2",
-    "moonlight": ">=1.19.2-2.0.35"
+    "minecraft": ">=1.20.1",
+    "moonlight": ">=1.20.1-2.8.40"
   }
 }
