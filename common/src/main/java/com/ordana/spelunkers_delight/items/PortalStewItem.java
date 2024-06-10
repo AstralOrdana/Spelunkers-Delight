@@ -1,4 +1,4 @@
-package com.ordana.spelunkers_delight;
+package com.ordana.spelunkers_delight.items;
 
 import com.ordana.spelunkery.utils.LevelHelper;
 import net.minecraft.advancements.CriteriaTriggers;

@@ -1,5 +1,23 @@
 {
   "entity.spelunkers_delight.mod_entity": "Mod Entity",
-  "item.spelunkers_delight.mod_item": "Mod Item",
-  "block.spelunkers_delight.mod_block": "Mod Block"
+  "block.spelunkers_delight.mod_block": "Mod Block",
+
+
+  "item.spelunkers_delight.tangle_beer": "Tanglebeer",
+  "item.spelunkers_delight.sparkling_water": "Sparkling Water",
+  "item.spelunkers_delight.soda": "SODA!",
+  "item.spelunkers_delight.dimensional_milkshake": "Dimensional Milkshake",
+
+  "item.spelunkers_delight.glowamari": "Glowamari",
+  "block.spelunkers_delight.salt_lick": "Salt Lick",
+  "item.spelunkers_delight.cat_food": "Cat Food",
+
+  "item.spelunkers_delight.rock_candy": "Rock Candy",
+  "item.spelunkers_delight.salted_caramel": "Salted Caramel",
+  "item.spelunkers_delight.spring_water_taffy": "Spring Water Taffy",
+
+  "item.spelunkers_delight.bubcap_stew": "Million Bubcap Stew",
+  "item.spelunkers_delight.gray_slop": "Gray Slop",
+  "item.spelunkers_delight.stone_soup": "Stone Soup",
+  "item.spelunkers_delight.dimensional_stew": "Dimensional Stew"
 }

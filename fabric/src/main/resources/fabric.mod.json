@@ -26,6 +26,6 @@
   "depends": {
     "fabric": "*",
     "minecraft": ">=1.20.1",
-    "moonlight": ">=1.20.1-2.8.40"
+    "moonlight": ">=1.20-2.7.0"
   }
 }

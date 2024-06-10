@@ -1,8 +1,14 @@
 package com.ordana.spelunkers_delight.reg;
 
+import com.nhoryzon.mc.farmersdelight.item.ConsumableItem;
 import com.ordana.spelunkers_delight.SpelunkersDelight;
+import com.ordana.spelunkers_delight.items.CatFoodItem;
 import net.mehvahdjukaar.moonlight.api.platform.RegHelper;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Rarity;
 
 import java.util.function.Supplier;
@@ -16,23 +22,32 @@ public class ModItems {
         return RegHelper.registerItem(SpelunkersDelight.res(name), itemSup);
     }
 
+    public static Item.Properties bowlFoodItem(FoodProperties food) {
+        return new Item.Properties().food(food).craftRemainder(Items.BOWL).stacksTo(16);
+    }
+
+    public static Item.Properties bottleFoodItem(FoodProperties food) {
+        return new Item.Properties().food(food).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16);
+    }
+
     //drinks
     public static final Supplier<Item> TANGLE_BEER = regItem("tangle_beer", () ->
-            new Item(new Item.Properties().food(ModFoods.TANGLE_BEER)));
+            new ConsumableItem(bowlFoodItem(ModFoods.TANGLE_BEER), true));
     public static final Supplier<Item> SPARKLING_WATER = regItem("sparkling_water", () ->
-            new Item(new Item.Properties().food(ModFoods.SPARKLING_WATER)));
+            new ConsumableItem(bottleFoodItem(ModFoods.SPARKLING_WATER), true));
     public static final Supplier<Item> SODA = regItem("soda", () ->
-            new Item(new Item.Properties().food(ModFoods.SODA)));
+            new ConsumableItem(bowlFoodItem(ModFoods.SODA), true));
     public static final Supplier<Item> DIMENSIONAL_MILKSHAKE = regItem("dimensional_milkshake", () ->
-            new Item(new Item.Properties().food(ModFoods.DIMENSIONAL_MILKSHAKE).rarity(Rarity.UNCOMMON)));
+            new Item(new Item.Properties().food(ModFoods.DIMENSIONAL_MILKSHAKE).stacksTo(16).rarity(Rarity.UNCOMMON)));
 
     //snacks
     public static final Supplier<Item> GLOWAMARI = regItem("glowamari", () ->
-            new Item(new Item.Properties().food(ModFoods.GLOWAMARI)));
-    public static final Supplier<Item> SALT_LICK = regItem("salt_lick", () ->
-            new Item(new Item.Properties().food(ModFoods.SALT_LICK)));
+            new Item(new Item.Properties().food(ModFoods.GLOWAMARI)
+                    .craftRemainder(BuiltInRegistries.ITEM.get(new ResourceLocation("spelunkery:glowstick")))));
+    //public static final Supplier<Item> SALT_LICK = regItem("salt_lick", () ->
+            //new Item(new Item.Properties().food(ModFoods.SALT_LICK)));
     public static final Supplier<Item> CAT_FOOD = regItem("cat_food", () ->
-            new Item(new Item.Properties().food(ModFoods.CAT_FOOD)));
+            new CatFoodItem(bowlFoodItem(ModFoods.CAT_FOOD)));
 
     //sweets
     public static final Supplier<Item> ROCK_CANDY = regItem("rock_candy", () ->
@@ -44,12 +59,12 @@ public class ModItems {
 
     //meals
     public static final Supplier<Item> BUBCAP_STEW = regItem("bubcap_stew", () ->
-            new Item(new Item.Properties().food(ModFoods.BUBCAP_STEW)));
+            new ConsumableItem(bowlFoodItem(ModFoods.BUBCAP_STEW), true));
     public static final Supplier<Item> GRAY_SLOP = regItem("gray_slop", () ->
-            new Item(new Item.Properties().food(ModFoods.GRAY_SLOP)));
+            new ConsumableItem(bowlFoodItem(ModFoods.GRAY_SLOP), true));
     public static final Supplier<Item> STONE_SOUP = regItem("stone_soup", () ->
-            new Item(new Item.Properties().food(ModFoods.STONE_SOUP)));
+            new ConsumableItem(bowlFoodItem(ModFoods.STONE_SOUP), true));
     public static final Supplier<Item> DIMENSIONAL_STEW = regItem("dimensional_stew", () ->
-            new Item(new Item.Properties().food(ModFoods.DIMENSIONAL_STEW).rarity(Rarity.UNCOMMON)));
+            new ConsumableItem(bowlFoodItem(ModFoods.DIMENSIONAL_STEW), true));
 
 }
